@@ -1,9 +1,24 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { ReactNode, useEffect } from 'react';
 
 import styles from '../styles/Home.module.css';
 
+const Stateless: React.FC<ReactNode> = function () {
+  return <div />;
+};
+
 export default function Home() {
+  const calculateThis = (x: number) => {
+    return {
+      result: x ** 2,
+    };
+  };
+
+  useEffect(() => {
+    calculateThis(2);
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -16,6 +31,8 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+
+        <Stateless />
 
         <p className={styles.description}>
           Get started by editing <code className={styles.code}>pages/index.tsx</code>
