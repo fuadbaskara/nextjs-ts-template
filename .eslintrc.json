@@ -5,6 +5,24 @@
     "project": "./tsconfig.eslint.json"
   },
   "rules": {
-    "jsx-a11y/anchor-is-valid": "warn"
-  }
+    "jsx-a11y/anchor-is-valid": "warn",
+    "unicorn/prefer-query-selector": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["scripts/**/*.[jt]s"],
+      "rules": {
+        "no-plusplus": "off",
+        "unicorn/prefer-top-level-await": "off"
+      }
+    },
+    {
+      "files": ["e2e/**/*.[jt]s"],
+      "rules": {
+        "jest/no-deprecated-functions": "off",
+        "jest/no-standalone-expect": "off",
+        "import/no-extraneous-dependencies": "off"
+      }
+    }
+  ]
 }
