@@ -23,5 +23,8 @@ module.exports = {
     ],
     'arrow-body-style': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'no-param-reassign': 'off',
+    '@typescript-eslint/indent': 'off',
+    'import/extensions': 'off',
   },
 };

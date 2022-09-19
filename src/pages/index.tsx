@@ -1,14 +1,5 @@
-import React, { ReactNode, useEffect } from 'react';
-import AppComponent from './AppComponent';
+import React, { ReactNode } from 'react';
 
 export default function Home(): ReactNode {
-  const calculateThis = (x: number): number => {
-    return x ** 2;
-  };
-
-  useEffect(() => {
-    calculateThis(2);
-  }, []);
-
-  return <AppComponent />;
+  return <div>Begin Code!</div>;
 }
